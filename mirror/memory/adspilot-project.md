@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2e482ace-b0b2-4185-962b-a49ffb3bed17
-  modified: 2026-10-03T07:56:34.071Z
+  modified: 2026-10-07T21:52:33.974Z
 ---
 
 AdsPilot lives in `D:\My AI Works\AI-Automation\Social-Publisher`. Resume from
@@ -51,6 +51,20 @@ businesses, built so any AI client can run it.
   `dist/`, which is not in git; `apps/mcp` runs from `src/`. After changing a package's
   `src`, run its build (`npx tsc -p tsconfig.json` in that package) before reconnecting
   the MCP, or the old code keeps running (cost two failed Muzaree creates, 2026-10-08).
+- Backups (since 2026-10-08): the main repo pushes to private GitHub
+  `Zain5163/MCP.1920agency` (origin); everything outside it (LinkedIn-Content-Ops,
+  Social-Render, LinkedIn-Content-System, memory notes, scheduled-task XML) goes
+  to `Zain5163/MCP.1920agency-Tooling` via `bash AI-Automation/MCP-Tooling/sync.sh`
+  (secret-scans, commits, pushes). After product work: push the main repo and run
+  the sync. Never put `~/.social-publisher` (.env, tokens, DB dumps) in either.
+- Another session may switch the shared repo to its own branch at any moment
+  (2026-10-08 it switched to `own-skills` seconds before a merge, so the merge
+  landed there). Check `git branch --show-current` right before every merge/commit.
+- Plans: Free 200 calls/month, Premium $9 (decision 0009); payment provider
+  **Polar** (pays out to Pakistan via Stripe Connect Express). Hosting target
+  `mcp.1920agency.com` on the Hetzner server. Decision 0010: plain Postgres only,
+  daily encrypted dumps copied to `~/.social-publisher/backups`, one-command setup
+  in `deploy/`, move data off Supabase (Singapore) to the Helsinki server in Phase 3.
 - The owner's own offline datasets (PixBundle.com etc.) and the token's reach into
   client ad accounts are deliberate; do not flag them.
 
