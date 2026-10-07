@@ -1,0 +1,16 @@
+{
+  "id": "2026-10-02-pm",
+  "source": "D:\\My AI Works\\Marketing-and-Content\\LinkedIn-Content-System\\drafts\\2026-10-02-pm.md",
+  "notes": "Recommended quote card from the visual spec: lead = post line 16, quote = post line 18, verbatim. Replaces the optional real screenshot only with the owner's OK.",
+  "format": "portrait",
+  "kind": "single",
+  "byline": "Zain Usman",
+  "slides": [
+    {
+      "type": "quote",
+      "lead": "Meta refused my first live campaign with one sentence:",
+      "quote": "\"Dynamic creative ads can only be created under dynamic creative ad sets.\"",
+      "gradient": "dynamic creative ad sets."
+    }
+  ]
+}

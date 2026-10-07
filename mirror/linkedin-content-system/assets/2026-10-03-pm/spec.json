@@ -1,0 +1,69 @@
+{
+  "id": "2026-10-03-pm",
+  "source": "D:\\My AI Works\\Marketing-and-Content\\LinkedIn-Content-System\\drafts\\2026-10-03-pm.md",
+  "notes": "Slide notes lines 42-47. Headline colons dropped and the body's first letter capitalised (the one allowed punctuation change). Slides 2-3 use the visual spec's tile split; slide 4 splits on the middle dots and draws plain frames at exactly 4:5, 1:1, 9:16 and 1.91:1. Slides 5-6 (Catch 1 and 2) share one position.",
+  "format": "portrait",
+  "kind": "carousel",
+  "byline": "Zain Usman",
+  "documentTitle": "What one Meta ad can carry: the real limits",
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "What one Meta ad can actually carry.",
+      "gradient": "actually carry.",
+      "sub": "The limits, and two catches."
+    },
+    {
+      "type": "data",
+      "series": "limits",
+      "headline": "Text",
+      "lead": "Up to",
+      "tiles": [
+        { "value": "5", "label": "primary texts" },
+        { "value": "5", "label": "headlines" },
+        { "value": "5", "label": "descriptions" }
+      ],
+      "footer": "Meta rotates them and learns.",
+      "gradientTiles": true
+    },
+    {
+      "type": "data",
+      "series": "limits",
+      "headline": "Media",
+      "lead": "Up to",
+      "tiles": [
+        { "value": "10", "label": "images" },
+        { "value": "10", "label": "videos" },
+        { "value": "5", "label": "calls to action" }
+      ],
+      "gradientTiles": true
+    },
+    {
+      "type": "data",
+      "headline": "Shapes, one ad",
+      "gradient": "one ad",
+      "tiles": [
+        { "frames": ["4:5", "1:1"], "label": "Feed", "value": "4:5 or 1:1" },
+        { "frames": ["9:16"], "label": "Stories and Reels", "value": "9:16" },
+        { "frames": ["1.91:1"], "label": "Landscape", "value": "1.91:1" }
+      ],
+      "footer": "Placement asset customisation serves each placement its own file."
+    },
+    {
+      "type": "point",
+      "series": "catches",
+      "headline": "Catch 1",
+      "body": "Multiple texts and placement-specific files can't share one creative. Meta refuses it (\"Multiple bodies assets cannot be applied to rule no. 1\"). Split it: one ad per text, each keeping every shape.",
+      "gradient": "can't share one creative.",
+      "mono": ["\"Multiple bodies assets cannot be applied to rule no. 1\""]
+    },
+    {
+      "type": "closing",
+      "series": "catches",
+      "headline": "Catch 2",
+      "body": "I supplied a 1:1 next to a 4:5. It uploaded fine and was never served. I only found out by reading the creative back from Meta.",
+      "takeaway": "Always read back what you built.",
+      "gradient": "Always read back what you built."
+    }
+  ]
+}

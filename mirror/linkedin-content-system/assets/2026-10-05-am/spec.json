@@ -1,0 +1,22 @@
+{
+  "id": "2026-10-05-am",
+  "source": "D:\\My AI Works\\Marketing-and-Content\\LinkedIn-Content-System\\drafts\\2026-10-05-am.md",
+  "notes": "Recommended checklist card from the visual spec (eyebrow line 35 verbatim, headline and points condensed from lines 37 and 39, footer line 39 verbatim). Numbered markers, never a ticked box, no Ads Manager mock-up (check_before_posting).",
+  "format": "portrait",
+  "kind": "single",
+  "byline": "Zain Usman",
+  "slides": [
+    {
+      "type": "checklist",
+      "eyebrow": "The habit I'd suggest:",
+      "headline": "Before you call a campaign launched",
+      "gradient": "launched",
+      "items": [
+        "Open the ad, scroll to Tracking.",
+        "Check that Website events is ticked with the right pixel.",
+        "Check that the pixel has fired recently."
+      ],
+      "footer": "A pixel that's connected but silent is the same as no pixel."
+    }
+  ]
+}

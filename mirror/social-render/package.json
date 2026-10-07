@@ -1,0 +1,10 @@
+{
+  "name": "social-render",
+  "private": true,
+  "description": "Brand renderer: JSON spec to exact-size PNGs and carousel PDFs, via headless Chrome. Node built-ins only.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test test/render.test.mjs",
+    "check": "node render.mjs --check"
+  }
+}

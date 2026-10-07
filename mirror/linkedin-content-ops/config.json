@@ -1,0 +1,25 @@
+{
+  "contentRoot": "D:\\My AI Works\\Marketing-and-Content\\LinkedIn-Content-System",
+  "cliRoot": "D:\\My AI Works\\AI-Automation\\Social-Publisher\\source\\apps\\cli",
+  "platform": "linkedin",
+  "utcOffset": "+05:00",
+  "slots": {
+    "AM": "09:00",
+    "MID": "15:30",
+    "PM": "22:00"
+  },
+  "maxUnreviewedDrafts": 6,
+  "daysAhead": 2,
+  "weekdaySlots": {
+    "Mon-Thu": [
+      "AM",
+      "MID",
+      "PM"
+    ],
+    "Fri-Sun": [
+      "MID",
+      "PM"
+    ]
+  },
+  "postsLog": "POSTS-LOG.md"
+}

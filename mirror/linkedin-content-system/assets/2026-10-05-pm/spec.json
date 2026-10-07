@@ -1,0 +1,67 @@
+{
+  "id": "2026-10-05-pm",
+  "source": "D:\\My AI Works\\Marketing-and-Content\\LinkedIn-Content-System\\drafts\\2026-10-05-pm.md",
+  "notes": "Slide notes lines 39-45. Headline colons dropped and the body's first letter capitalised where it is a letter (slide 2 starts with the code chip, so it stays as written). Slides 3-5 are one series. Slide 6 draws the arrows of the lifecycle as a 4-step flow with the last sentence as its footnote. No competitor is named or shown.",
+  "format": "portrait",
+  "kind": "carousel",
+  "byline": "Zain Usman",
+  "documentTitle": "An approval an AI cannot forge: how I gate ad spend",
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "An approval an AI cannot forge.",
+      "gradient": "cannot forge.",
+      "sub": "How I gate ad spend."
+    },
+    {
+      "type": "point",
+      "headline": "The problem",
+      "body": "\"confirm: true\" is something the model can type itself. That's not a human decision.",
+      "gradient": "not a human decision.",
+      "chips": ["\"confirm: true\""]
+    },
+    {
+      "type": "point",
+      "series": "gates",
+      "headline": "Gate 1,\nvalidation",
+      "gradient": "validation",
+      "body": "Refused before anything is built if Meta would reject it."
+    },
+    {
+      "type": "point",
+      "series": "gates",
+      "headline": "Gate 2,\nthe ceiling",
+      "gradient": "the ceiling",
+      "body": "Daily and monthly limits across the whole account. No limit set means nothing that spends will run."
+    },
+    {
+      "type": "point",
+      "series": "gates",
+      "headline": "Gate 3,\napproval",
+      "gradient": "approval",
+      "body": "A person sees the plan and the cost, and gets a token tied to exactly that plan. Change one thing and the token is void."
+    },
+    {
+      "type": "flow",
+      "headline": "Lifecycle",
+      "steps": [
+        "created paused",
+        "approved",
+        "ads and ad sets switched on",
+        "campaign switched on last"
+      ],
+      "gradient": "campaign switched on last",
+      "footer": "Refused if Meta rejected any ad."
+    },
+    {
+      "type": "closing",
+      "headline": "Stopping is free",
+      "gradient": "Stopping is free",
+      "body": [
+        "Pause has no gate.",
+        "A wrong pause costs some delivery.",
+        "A slow pause costs money."
+      ]
+    }
+  ]
+}

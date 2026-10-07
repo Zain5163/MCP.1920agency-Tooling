@@ -1,0 +1,52 @@
+{
+  "id": "2026-10-07-pm",
+  "source": "D:\\My AI Works\\Marketing-and-Content\\LinkedIn-Content-System\\drafts\\2026-10-07-pm.md",
+  "notes": "Slide notes lines 39-44. Headline colons dropped and the body's first letter capitalised. The cover's sub-line is the quoted error, set in mono. Slides 3-5 are one series. No screenshots and no IDs.",
+  "format": "portrait",
+  "kind": "carousel",
+  "byline": "Zain Usman",
+  "documentTitle": "Meta \"code 10\" permission errors: stop guessing, ask 3 questions",
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Meta \"code 10\": stop guessing.",
+      "gradient": "stop guessing.",
+      "sub": "\"You don't have the required permission to access this profile.\"",
+      "mono": ["\"You don't have the required permission to access this profile.\""]
+    },
+    {
+      "type": "point",
+      "headline": "Why it's confusing",
+      "body": "The error names the symptom. It never names the identity or the missing link.",
+      "gradient": "the symptom"
+    },
+    {
+      "type": "point",
+      "series": "questions",
+      "headline": "Question 1,\nwho is the token?",
+      "gradient": "who is the token?",
+      "body": "Check which user or system user it really belongs to. Test tokens and real system users are different identities."
+    },
+    {
+      "type": "point",
+      "series": "questions",
+      "headline": "Question 2,\nwhat can it reach?",
+      "gradient": "what can it reach?",
+      "body": "Which Pages, with which tasks (for example, advertise only, or full)."
+    },
+    {
+      "type": "point",
+      "series": "questions",
+      "headline": "Question 3,\nwhat will the ad account promote?",
+      "gradient": "what will the ad account promote?",
+      "body": "If that list is empty, a creative naming your Page will fail."
+    },
+    {
+      "type": "closing",
+      "headline": "The trap",
+      "body": "A Page assigned in Business Manager is not the same as a Page linked to the ad account.",
+      "takeaway": "You need both.",
+      "gradient": "You need both."
+    }
+  ]
+}

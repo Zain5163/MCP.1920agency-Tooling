@@ -1,0 +1,9 @@
+{
+  "id": "newsletter-logo",
+  "notes": "LinkedIn newsletter image (shown at 300x300). Rendered at 1080x1080, downscaled.",
+  "format": "square",
+  "kind": "single",
+  "slides": [
+    { "type": "point", "eyebrow": "A build log", "headline": "Before it\nhas a name.", "gradient": "has a name.", "body": "What I'm building, every week." }
+  ]
+}

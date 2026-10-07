@@ -1,0 +1,9 @@
+{
+  "id": "example-story",
+  "notes": "Test fixture: a 1080x1920 story cover; copy stays out of the top and bottom app overlays. Not for posting.",
+  "format": "story",
+  "kind": "single",
+  "slides": [
+    { "type": "cover", "headline": "A story cover, large and short.", "gradient": "large and short.", "sub": "Copy stays clear of the app overlays." }
+  ]
+}

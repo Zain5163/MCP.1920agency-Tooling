@@ -1,0 +1,9 @@
+{
+  "id": "example-square",
+  "notes": "Test fixture: a 1080x1080 single image. Not for posting.",
+  "format": "square",
+  "kind": "single",
+  "slides": [
+    { "type": "quote", "lead": "A square card, 1080 by 1080:", "quote": "\"One strong idea, a short quote, one gradient phrase.\"", "gradient": "one gradient phrase." }
+  ]
+}

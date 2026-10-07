@@ -1,0 +1,17 @@
+{
+  "id": "example-all-types",
+  "notes": "Test fixture: one slide of every type with neutral sample text. Not for posting.",
+  "format": "portrait",
+  "kind": "carousel",
+  "documentTitle": "Social-Render sample deck",
+  "slides": [
+    { "type": "cover", "eyebrow": "Sample deck", "headline": "Every slide type in one sample deck.", "gradient": "one sample deck.", "sub": "A cover with an eyebrow, a headline and a sub-line." },
+    { "type": "point", "headline": "A point slide", "gradient": "point slide", "body": ["One idea per slide, with \"inline code\" set as a chip.", "A second paragraph -> drawn arrow: → done."], "chips": ["\"inline code\""] },
+    { "type": "data", "headline": "Number tiles", "lead": "Up to", "tiles": [ { "value": "3", "label": "sample units" }, { "value": "12", "label": "other units" } ], "footer": "Tile values carry the gradient.", "gradientTiles": true },
+    { "type": "data", "headline": "Shape frames", "gradient": "frames", "tiles": [ { "frames": ["4:5", "1:1"], "label": "Portrait", "value": "4:5 or 1:1" }, { "frames": ["9:16"], "label": "Story", "value": "9:16" } ] },
+    { "type": "quote", "lead": "A lead-in line above the quote:", "quote": "\"A quoted sentence keeps its straight quote marks.\"", "gradient": "straight quote marks." },
+    { "type": "checklist", "eyebrow": "A checklist", "headline": "Numbered, never ticked", "gradient": "never ticked", "items": ["First item.", "Second item, a little longer than the first.", "Third item."], "footer": "A footer note under the list." },
+    { "type": "flow", "headline": "A flow", "gradient": "last step", "steps": ["first step", "second step", "last step"], "footer": "A footnote under the flow." },
+    { "type": "closing", "headline": "A closing slide", "body": "The body sits above a takeaway line.", "takeaway": "The takeaway carries the gradient.", "gradient": "carries the gradient." }
+  ]
+}

@@ -1,0 +1,239 @@
+/* =========================================================================
+   Social-Render brand stylesheet
+
+   Derived from the personal-brand design system:
+     Websites/Zain-Personal-Branding/source/src/lib/brand-tokens.ts
+     Websites/Zain-Personal-Branding/source/src/app/globals.css
+   Tokens, gradient text, brand mark, eyebrow, glass card and the glow /
+   ribbon / orb atmosphere are taken from there; sizes are re-stated for a
+   1080 px wide canvas. Keep one-off values out of the slide templates: add a
+   variable here instead.
+
+   Brand rules this file encodes: dark navy depth, teal and aqua dominant,
+   lilac and orchid only as soft atmosphere, the brand gradient on one key
+   phrase per slide, generous whitespace, soft bloom rather than neon.
+   ========================================================================= */
+
+:root {
+  /* brand-tokens.ts colors */
+  --brand-teal: #14d1c8;
+  --brand-aqua: #44e0fa;
+  --brand-sky: #60a5fa;
+  --brand-lilac: #c084fc;
+  --brand-orchid: #f472b6;
+  --brand-white: #ffffff;
+  --brand-mist: #aeb6c7;
+  --brand-navy: #081b2d;
+  --brand-slate: #0b1d33;
+  /* globals.css surfaces and lines */
+  --surface: #0d2238;
+  --surface-light: #112b45;
+  --line: rgba(255, 255, 255, 0.12);
+  --line-bright: rgba(125, 235, 242, 0.28);
+  --gradient-brand: linear-gradient(110deg, #14d1c8 0%, #44e0fa 28%, #60a5fa 50%, #c084fc 77%, #f472b6 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.055));
+  --shadow-glass: inset 0 1px 0 rgba(255,255,255,.2), 0 22px 70px rgba(1,12,25,.24);
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+  --blur-glass: 22px;
+  --blur-strong: 40px;
+  /* copy colours the site uses */
+  --ink-strong: #eef3f7;
+  --ink-lede: #c3ced8;     /* .hero-lede */
+  --ink-eyebrow: #98f3ee;  /* .eyebrow */
+  --ink-index: #8fa4b3;    /* .card-index / footnote family, lifted for small sizes */
+  --ink-code: #8dece9;     /* .type-specimen code */
+  /* type roles: Display 650, Heading 620, Body 420, Mono 520 */
+  --font-sans: "Geist", "Geist Fallback", Arial, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--brand-navy); }
+body {
+  color: var(--brand-white);
+  font-family: var(--font-sans);
+  font-weight: 420;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-synthesis: none;
+}
+
+/* ---------------------------------------------------------------- canvas */
+/* --w and --h come from the spec's format (set inline by render.mjs).
+   --kh scales display type and --kb body type; the page script lowers them
+   only when content would not fit, never below the spec's minimum body size. */
+.slide {
+  --pad-x: 88px; --pad-t: 84px; --pad-b: 96px; --gap-head: 72px;
+  --fs-display: 122px; --fs-h: 100px; --fs-quote: 90px; --fs-takeaway: 80px;
+  --fs-lead: 46px; --fs-body: 44px; --fs-value: 120px; --fs-label: 44px;
+  --fs-item: 42px; --fs-step: 44px;
+  --fs-eyebrow: 26px; --fs-byline: 30px; --fs-counter: 26px;
+  --kh: 1; --kb: 1;
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 40% -10%, rgba(20,209,200,.11), transparent 720px),
+    var(--brand-navy);
+}
+.fmt-square .slide {
+  --pad-x: 80px; --pad-t: 72px; --pad-b: 76px; --gap-head: 48px;
+  --fs-display: 100px; --fs-h: 88px; --fs-quote: 70px; --fs-takeaway: 66px;
+  --fs-lead: 42px; --fs-body: 40px; --fs-value: 104px; --fs-label: 40px;
+  --fs-item: 38px; --fs-step: 40px;
+}
+/* Stories: keep copy out of the top ~250 px and bottom ~340 px app overlays. */
+.fmt-story .slide {
+  --pad-x: 96px; --pad-t: 250px; --pad-b: 340px; --gap-head: 96px;
+  --fs-display: 128px; --fs-h: 108px; --fs-quote: 90px; --fs-takeaway: 82px;
+  --fs-lead: 48px; --fs-body: 46px; --fs-value: 128px; --fs-label: 46px;
+  --fs-item: 44px; --fs-step: 46px;
+}
+
+.frame {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: var(--pad-t) var(--pad-x) var(--pad-b);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+.main { min-height: 0; display: flex; flex-direction: column; padding-top: var(--gap-head); }
+.stack { display: flex; flex-direction: column; flex: none; }
+
+/* ---------------------------------------------------------------- header */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 46px; }
+.byline { display: flex; align-items: center; gap: 18px; }
+.byline strong { font-size: var(--fs-byline); font-weight: 600; letter-spacing: -.02em; line-height: 1; }
+/* .brand-mark from globals.css at twice the size */
+.brand-mark { display: grid; grid-template-columns: repeat(3, 10px); gap: 4px; align-items: end; width: 38px; height: 44px; transform: skewX(-13deg); flex: none; }
+.brand-mark span { display: block; border-radius: 8px; background: var(--gradient-brand); box-shadow: 0 0 20px rgba(68,224,250,.32); }
+.brand-mark span:nth-child(1) { height: 22px; }
+.brand-mark span:nth-child(2) { height: 40px; }
+.brand-mark span:nth-child(3) { height: 30px; }
+.counter { color: var(--ink-index); font: 520 var(--fs-counter)/1 var(--font-mono); letter-spacing: .12em; white-space: nowrap; }
+
+/* ---------------------------------------------------------- type roles */
+.eyebrow { display: flex; align-items: center; gap: 20px; margin: 0; color: var(--ink-eyebrow); font: 550 calc(var(--fs-eyebrow) * var(--kb))/1.3 var(--font-mono); letter-spacing: .16em; text-transform: uppercase; }
+.eyebrow::before { content: ""; flex: none; width: 56px; height: 2px; background: var(--brand-teal); box-shadow: 0 0 8px var(--brand-aqua); }
+.display { margin: 0; font-size: calc(var(--fs-display) * var(--kh)); font-weight: 650; line-height: .98; letter-spacing: -.055em; text-wrap: balance; }
+.headline { margin: 0; font-size: calc(var(--fs-h) * var(--kh)); font-weight: 620; line-height: 1.02; letter-spacing: -.05em; text-wrap: balance; }
+.lead { margin: 0; font-size: calc(var(--fs-lead) * var(--kb)); line-height: 1.32; color: var(--ink-lede); letter-spacing: -.015em; text-wrap: pretty; }
+.body { margin: 0; font-size: calc(var(--fs-body) * var(--kb)); line-height: 1.38; color: var(--ink-lede); letter-spacing: -.012em; text-wrap: pretty; }
+.eyebrow + .display, .eyebrow + .headline { margin-top: 34px; }
+
+/* The one key phrase. Padding lets the gradient reach the last glyph's ink,
+   which tight tracking would otherwise clip; the negative margin keeps layout. */
+.g { background: var(--gradient-brand); -webkit-background-clip: text; background-clip: text; color: transparent; padding: 0 .07em .08em 0; margin-right: -.07em; }
+.tile-value.g { padding-right: .05em; margin-right: -.05em; }
+
+/* Inline code: plain mono for long strings, a chip for a short token. */
+/* Softer than --ink-code so the gradient phrase stays the one highlight. */
+.mono { font-family: var(--font-mono); font-weight: 450; font-size: .86em; letter-spacing: -.02em; color: #a8dcdc; }
+.chip { display: inline-block; padding: .1em .42em .12em; border: 1px solid var(--line-bright); border-radius: 14px; background: rgba(20,209,200,.1); box-shadow: inset 0 1px 0 rgba(255,255,255,.08); color: #d6fbf9; font: 500 .86em/1.25 var(--font-mono); letter-spacing: -.02em; white-space: nowrap; }
+.arrow { display: inline-block; width: .82em; height: .82em; vertical-align: -.08em; }
+
+/* globals.css .glass-card */
+.glass { background: var(--gradient-glass); border: 1px solid rgba(255,255,255,.14); box-shadow: var(--shadow-glass); -webkit-backdrop-filter: blur(var(--blur-glass)) saturate(125%); backdrop-filter: blur(var(--blur-glass)) saturate(125%); }
+
+/* ---------------------------------------------------------------- cover */
+.t-cover .stack { margin-top: auto; }
+.t-cover .lead { margin-top: 46px; max-width: 880px; }
+.t-cover .lead .mono { font-size: .84em; line-height: 1.5; }
+
+/* ---------------------------------------------------------------- point */
+.copy { display: grid; gap: 30px; }
+.headline + .copy { margin-top: 56px; }
+.copy .body .mono { line-height: 1.3; }
+
+/* ----------------------------------------------------------------- data */
+.lead-in { margin-top: 52px; }
+.tiles { display: grid; gap: 18px; margin-top: 26px; }
+.headline + .tiles { margin-top: 56px; }
+.tiles--grid { grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); }
+/* value column fits two digits at the current scale, so labels line up across tiles */
+.tile { display: grid; grid-template-columns: calc(var(--fs-value) * var(--kh) * 1.3) minmax(0, 1fr); align-items: center; gap: 34px; padding: 24px 40px; border-radius: var(--radius-lg); }
+.tiles--grid .tile { grid-template-columns: 1fr; align-content: start; gap: 12px; padding: 32px 30px; }
+.tile-value { font-size: calc(var(--fs-value) * var(--kh)); font-weight: 650; line-height: 1; letter-spacing: -.05em; }
+.tile-label { font-size: calc(var(--fs-label) * var(--kb)); font-weight: 520; line-height: 1.15; letter-spacing: -.02em; color: var(--ink-strong); }
+.tile--shape { grid-template-columns: 268px minmax(0, 1fr); padding: 30px 40px; }
+.frames { display: flex; align-items: flex-end; gap: 16px; height: calc(132px * var(--kb)); }
+.shape { display: block; height: 100%; border: 2px solid rgba(125,235,242,.62); border-radius: 10px; background: linear-gradient(160deg, rgba(68,224,250,.12), rgba(68,224,250,.02)); box-shadow: inset 0 1px 0 rgba(255,255,255,.12); }
+.tile-copy { display: grid; gap: 10px; min-width: 0; }
+.tile-copy .tile-label { font-weight: 600; }
+.tile-copy .tile-sub { font: 520 calc(var(--fs-label) * .9 * var(--kb))/1.2 var(--font-mono); letter-spacing: -.01em; color: var(--ink-code); }
+.foot { margin-top: 44px; }
+
+/* ---------------------------------------------------------------- quote */
+.t-quote .lead { color: var(--ink-lede); }
+.quote { margin: 44px 0 0; font-size: calc(var(--fs-quote) * var(--kh)); font-weight: 600; line-height: 1.1; letter-spacing: -.04em; text-wrap: balance; }
+.qm { color: var(--brand-teal); }
+
+/* ------------------------------------------------------------ checklist */
+.t-checklist { --fs-h: 88px; }
+.fmt-square .t-checklist { --fs-h: 76px; }
+.fmt-story .t-checklist { --fs-h: 96px; }
+.checklist { display: grid; gap: 18px; margin: 56px 0 0; padding: 0; list-style: none; }
+.check { display: grid; grid-template-columns: 76px minmax(0, 1fr); align-items: center; gap: 30px; padding: 26px 36px 26px 30px; border-radius: var(--radius-md); }
+/* globals.css .icon-shell, numbered: never a tick mark */
+.check-n { display: grid; place-items: center; width: 76px; height: 76px; border: 1px solid rgba(93,235,238,.3); border-radius: 18px; background: rgba(20,209,200,.1); box-shadow: inset 0 1px 0 rgba(255,255,255,.12); color: #7eece8; font: 520 28px/1 var(--font-mono); letter-spacing: .04em; }
+.check-text { font-size: calc(var(--fs-item) * var(--kb)); line-height: 1.26; letter-spacing: -.015em; color: var(--ink-strong); }
+.note { margin: 48px 0 0; padding-left: 30px; border-left: 3px solid var(--brand-teal); font-size: calc(var(--fs-body) * var(--kb)); line-height: 1.34; letter-spacing: -.012em; color: var(--ink-strong); text-wrap: pretty; }
+
+/* ----------------------------------------------------------------- flow */
+.flow { display: grid; margin-top: 56px; }
+.step { padding: 28px 40px; border-radius: var(--radius-md); font-size: calc(var(--fs-step) * var(--kb)); font-weight: 560; line-height: 1.2; letter-spacing: -.025em; color: var(--ink-strong); }
+.flow-arrow { display: block; width: 44px; height: 44px; margin: 12px 0 12px 40px; color: var(--brand-teal); }
+
+/* -------------------------------------------------------------- closing */
+.t-closing .headline + .copy { margin-top: 52px; }
+.copy--lines { gap: 14px; }
+.takeaway { margin: 60px 0 0; padding-top: 52px; border-top: 1px solid var(--line-bright); font-size: calc(var(--fs-takeaway) * var(--kh)); font-weight: 650; line-height: 1.04; letter-spacing: -.045em; text-wrap: balance; }
+
+/* ----------------------------------------------------------- atmosphere */
+/* globals.css .glow / .ribbon / .orb / .story-orb, placed per slide type. */
+.atmos { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.atmos > * { position: absolute; display: block; }
+.glow { filter: blur(var(--blur-strong)); border-radius: 50%; opacity: .75; }
+.glow--teal { background: radial-gradient(circle, rgba(20,209,200,.18), transparent 68%); }
+.glow--lilac { background: radial-gradient(circle, rgba(192,132,252,.15), rgba(244,114,182,.06) 42%, transparent 70%); opacity: .55; }
+.ribbon { border-radius: 50%; border: 1px solid rgba(130,241,240,.26); background: linear-gradient(135deg, rgba(68,224,250,.13), rgba(192,132,252,.08), rgba(255,255,255,.02)); box-shadow: inset 0 1px 0 rgba(255,255,255,.28), 0 0 55px rgba(68,224,250,.08); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.ribbon--lilac { border-color: rgba(192,132,252,.2); }
+.orb { aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 30% 25%, rgba(255,255,255,.35), rgba(68,224,250,.1) 30%, rgba(96,165,250,.08) 55%, transparent 70%); border: 1px solid rgba(255,255,255,.15); box-shadow: inset -20px -20px 45px rgba(192,132,252,.08), 0 20px 70px rgba(8,25,49,.4); }
+.story-orb { aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.35), rgba(68,224,250,.2) 25%, rgba(192,132,252,.15) 55%, transparent 70%); opacity: .8; }
+
+.atmos--cover .glow--teal { width: 84%; height: 46%; left: -30%; top: -6%; }
+.atmos--cover .glow--lilac { width: 72%; height: 44%; right: -24%; top: 50%; }
+.atmos--cover .ribbon { width: 104%; height: 32%; left: -55%; top: 13%; transform: rotate(-28deg); }
+.atmos--cover .orb { width: 27%; right: 7%; top: 14%; }
+
+.atmos--point .glow--teal { width: 80%; height: 44%; right: -30%; top: -10%; }
+.atmos--point .glow--lilac { width: 60%; height: 36%; left: -26%; bottom: -12%; opacity: .45; }
+.atmos--point .ribbon { width: 112%; height: 13%; right: -64%; bottom: 13%; transform: rotate(21deg); }
+
+.atmos--data .glow--teal { width: 84%; height: 48%; left: -34%; top: 6%; }
+.atmos--data .glow--lilac { width: 64%; height: 40%; right: -26%; bottom: -12%; opacity: .45; }
+.atmos--data .ribbon { width: 100%; height: 26%; right: -60%; top: 2%; transform: rotate(-24deg); }
+
+.atmos--quote .glow--teal { width: 90%; height: 50%; left: -30%; top: -4%; }
+.atmos--quote .glow--lilac { width: 70%; height: 44%; right: -26%; bottom: -8%; }
+.atmos--quote .ribbon { width: 104%; height: 28%; left: -52%; bottom: 2%; transform: rotate(-28deg); }
+.atmos--quote .orb { width: 22%; right: 8%; top: 12%; }
+
+.atmos--checklist .glow--teal { width: 80%; height: 44%; right: -30%; top: -8%; }
+.atmos--checklist .glow--lilac { width: 60%; height: 40%; left: -24%; bottom: -14%; opacity: .45; }
+.atmos--checklist .ribbon { width: 100%; height: 24%; right: -62%; top: 6%; transform: rotate(-24deg); }
+
+.atmos--flow .glow--teal { width: 80%; height: 50%; left: -34%; top: 18%; }
+.atmos--flow .glow--lilac { width: 60%; height: 40%; right: -26%; bottom: -12%; opacity: .45; }
+.atmos--flow .ribbon { width: 110%; height: 14%; right: -62%; top: 8%; transform: rotate(21deg); }
+
+.atmos--closing .glow--teal { width: 86%; height: 50%; right: -30%; bottom: -12%; }
+.atmos--closing .story-orb { width: 46%; left: -18%; bottom: -10%; }
+.atmos--closing .ribbon { width: 108%; height: 15%; right: -60%; top: 26%; transform: rotate(21deg); }
