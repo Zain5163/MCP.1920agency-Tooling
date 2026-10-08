@@ -31,7 +31,9 @@ activate and budget change.
   (11:00 PKT) runs `Run-MuzareeDaily.ps1`: applies `MEDIA-BUYING-RULES.md`, may only
   switch losing ads OFF, writes `reports/`, queues everything else in
   `PENDING-APPROVALS.md` for the owner's yes.
-- Target cost per purchase is PKR 500–700; it was about 1,350 on 2026-10-06.
-  February's Chelsea boot ads hit about 600.
+- Unit economics (client, 2026-10-08): cost PKR 3,500 per pair, price 5,500–6,500, tax 18–24%
+  paid out of the price, store absorbs ~PKR 325 delivery. At today's order size PKR 600–700 per
+  purchase is only break-even; loss line PKR 500 (single pair), scale ≤ 450, or ≤ 700 with a
+  two-pair bundle. Order size (bundles) and fewer refused parcels are the profit levers.
 
 Related: [[adspilot-project]]

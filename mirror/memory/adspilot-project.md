@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2e482ace-b0b2-4185-962b-a49ffb3bed17
-  modified: 2026-10-07T21:52:33.974Z
+  modified: 2026-10-08T00:49:22.368Z
 ---
 
 AdsPilot lives in `D:\My AI Works\AI-Automation\Social-Publisher`. Resume from
@@ -65,6 +65,21 @@ businesses, built so any AI client can run it.
   `mcp.1920agency.com` on the Hetzner server. Decision 0010: plain Postgres only,
   daily encrypted dumps copied to `~/.social-publisher/backups`, one-command setup
   in `deploy/`, move data off Supabase (Singapore) to the Helsinki server in Phase 3.
+- Server (Stage A deployed 2026-10-08): hosted MCP + worker loop run on the
+  Hetzner box (`/opt/adspilot`, containers adspilot-mcp-1 / adspilot-worker-1),
+  `https://mcp.1920agency.com` via Raptor's Caddy on the separate network
+  `adspilot_edge` (the Caddy block and network are committed in Raptor's repo;
+  Raptor's release.sh re-uploads its deploy/ folder). Release new code with
+  `deploy/scripts/release.sh` from the repo (git archive; refuses pending
+  migrations; `--rollback`). Steps and remaining items: `deploy/README.md` and the
+  architecture doc's Phase 3 status. Both PC and server workers can drain the
+  same queue safely (SKIP LOCKED).
+- Shopify connector (2026-10-08): app "1920 Agency Store Connector" (org 239616792, config in
+  integrations/shopify-app), dev store 1920-agency-test-store; phase 1 read tools live
+  (list_shopify_stores, shopify_store_overview/products/sales/store_audit). Stores in
+  ~/.social-publisher/shopify-stores.json. SHOPIFY_CONNECT_ADDRESS=23.227.38.69 in .env works
+  around a dead ISP route; remove when *.myshopify.com loads. Plan:
+  architecture/2026-10-08-shopify-connector-plan.md (phase 2 = writes behind approvals).
 - The owner's own offline datasets (PixBundle.com etc.) and the token's reach into
   client ad accounts are deliberate; do not flag them.
 
