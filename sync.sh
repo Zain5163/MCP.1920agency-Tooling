@@ -25,6 +25,10 @@ copy_dir() { # copy_dir <source dir> <name in mirror>, skipping logs and depende
 copy_dir "$WS/AI-Automation/LinkedIn-Content-Ops" linkedin-content-ops
 copy_dir "$WS/AI-Automation/Social-Render" social-render
 copy_dir "$WS/Marketing-and-Content/LinkedIn-Content-System" linkedin-content-system
+
+# Client work operated with the product (decision D3, 2026-10-10). Its logs/ (the
+# headless run transcripts) are excluded by copy_dir, like every logs folder.
+copy_dir "$WS/AI-Automation/Muzaree-Paid-Media" clients/muzaree-paid-media
 mkdir -p "$OUT/marketing-notes"
 cp "$WS"/Marketing-and-Content/HANDOFF-*.md "$OUT/marketing-notes/" 2>/dev/null || true
 
@@ -32,13 +36,13 @@ cp "$WS"/Marketing-and-Content/HANDOFF-*.md "$OUT/marketing-notes/" 2>/dev/null 
 MEM="$HOME/.claude/projects/d--My-AI-Works/memory"
 if [ -d "$MEM" ]; then
   rm -rf "$OUT/memory"; mkdir -p "$OUT/memory"
-  cp "$MEM"/adspilot-*.md "$MEM"/muzaree-*.md "$OUT/memory/" 2>/dev/null || true
+  cp "$MEM"/adspilot-*.md "$MEM"/muzaree-*.md "$MEM"/server-front-gate.md "$MEM"/ads-objective-and-qa-rule.md "$OUT/memory/" 2>/dev/null || true
 fi
 
 # Windows scheduled tasks that run the product on this PC (restore with
 # schtasks /create /tn <name> /xml <file>)
 rm -rf "$OUT/scheduled-tasks"; mkdir -p "$OUT/scheduled-tasks"
-for t in AdsPilot-Worker AdsPilot-Monitor AdsPilot-Refresh LinkedIn-Content-Drafts Social-Publisher-Keepalive; do
+for t in AdsPilot-Worker AdsPilot-Monitor AdsPilot-Refresh LinkedIn-Content-Drafts Social-Publisher-Keepalive Muzaree-Ads-Daily Muzaree-Ads-Check; do
   schtasks //query //tn "$t" //xml > "$OUT/scheduled-tasks/$t.xml" 2>/dev/null || rm -f "$OUT/scheduled-tasks/$t.xml"
 done
 

@@ -1,0 +1,176 @@
+{
+  "account": "muzaree",
+  "campaignName": "Muzaree_Sales_ChelseaLed_Oct26",
+  "objective": "OUTCOME_SALES",
+  "adSets": [
+    {
+      "name": "Broad PK 18-65 | Purchase | Chelsea-led 6 angles",
+      "dailyBudget": 5000,
+      "countries": [
+        "PK"
+      ],
+      "ageMin": 18,
+      "ageMax": 65,
+      "conversionEvent": "PURCHASE",
+      "ads": [
+        {
+          "name": "D-winter-chelsea",
+          "primaryTexts": [
+            "Winter's here. Your boots should be too.\n\nMuzaree Chelsea Boots in premium cow leather: a smooth, wrinkle-free finish, elastic sides that slip on in seconds, and a sturdy sole with real grip.\n\nBrown or Matt Black. Every size from 39 to 44 in stock.\nWas PKR 10,999. Now PKR 5,999.\n\nCash on Delivery · Easy Exchange"
+          ],
+          "headlines": [
+            "Chelsea Boots, Now PKR 5,999"
+          ],
+          "descriptions": [
+            "Premium cow leather · Cash on Delivery"
+          ],
+          "callToAction": "SHOP_NOW",
+          "landingPageUrl": "https://muzaree.com/collections/chelsea",
+          "files": [
+            {
+              "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\D_winter-chelsea_4x5.jpg",
+              "kind": "image",
+              "aspectRatio": "4:5"
+            },
+            {
+              "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\D_winter-chelsea_9x16.jpg",
+              "kind": "image",
+              "aspectRatio": "9:16"
+            }
+          ]
+        },
+        {
+          "name": "G-chelsea-one-price",
+          "primaryTexts": [
+            "Every pair. One price. PKR 5,999.\n\nMuzaree Chelsea Boots in premium cow leather, in Brown or Matt Black. Smooth, wrinkle-free finish, elastic sides that slip on in seconds, and a sturdy sole for everyday wear.\n\nEvery size from 39 to 44 is in stock.\nWas PKR 10,999.\n\nCash on Delivery, or pay in advance and save 10%.\nEasy Exchange if the size isn't right."
+          ],
+          "headlines": [
+            "Chelsea Boots: One Price, PKR 5,999"
+          ],
+          "descriptions": [
+            "All sizes 39–44 · Cash on Delivery"
+          ],
+          "callToAction": "SHOP_NOW",
+          "landingPageUrl": "https://muzaree.com/collections/chelsea",
+          "files": [
+            {
+              "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\G_chelsea-one-price_4x5.jpg",
+              "kind": "image",
+              "aspectRatio": "4:5"
+            },
+            {
+              "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\G_chelsea-one-price_9x16.jpg",
+              "kind": "image",
+              "aspectRatio": "9:16"
+            }
+          ]
+        },
+        {
+          "name": "H-suede-chelsea-slip-on",
+          "primaryTexts": [
+            "Slip on. Stand out.\n\nThe Muzaree Black Suede Chelsea, our Limited Edition. Soft black suede, elastic sides, and a chunky grip sole made for winter.\n\nWas PKR 8,999. Now PKR 6,599.\nSizes 39 to 42 only, and limited stock.\n\nCash on Delivery · Easy Exchange"
+          ],
+          "headlines": [
+            "Black Suede Chelsea, PKR 6,599"
+          ],
+          "descriptions": [
+            "Limited Edition · Cash on Delivery"
+          ],
+          "callToAction": "SHOP_NOW",
+          "landingPageUrl": "https://muzaree.com/products/black-suede-chelsea-limited-edition",
+          "files": [
+            {
+              "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\H_suede-chelsea-scene_4x5.jpg",
+              "kind": "image",
+              "aspectRatio": "4:5"
+            },
+            {
+              "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\H_suede-chelsea-scene_9x16.jpg",
+              "kind": "image",
+              "aspectRatio": "9:16"
+            }
+          ]
+        },
+        {
+          "name": "A-colour-picker",
+          "primaryTexts": [
+            "Which colour are you? Espresso, Navy, Grey, Beige, Mustard or Black.\n\nMuzaree premium suede loafers: soft, lightweight and easy to wear from the office to the weekend. One shape, six moods.\n\n✓ Premium suede\n✓ Six colours\n✓ Cash on Delivery\n✓ Easy Exchange\n\nPick yours before your size sells out."
+          ],
+          "headlines": [
+            "6 Colours. Pick Yours."
+          ],
+          "descriptions": [
+            "From PKR 5,599 · Cash on Delivery"
+          ],
+          "callToAction": "SHOP_NOW",
+          "landingPageUrl": "https://muzaree.com/collections/mens-luxury-leather-loafers",
+          "files": [
+            {
+              "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\A_colour-picker_4x5.jpg",
+              "kind": "image",
+              "aspectRatio": "4:5"
+            },
+            {
+              "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\A_colour-picker_9x16.jpg",
+              "kind": "image",
+              "aspectRatio": "9:16"
+            }
+          ]
+        },
+        {
+          "name": "B-price-drop-espresso",
+          "primaryTexts": [
+            "Was PKR 11,999. Now PKR 5,999.\n\nThe Muzaree Espresso Suede Loafer: rich brown suede on a clean white sole. Wear it with chinos, denim or shalwar kameez.\n\nEvery size from 39 to 44 is in stock right now.\nCash on Delivery · Easy Exchange\n\nSale price while stock lasts."
+          ],
+          "headlines": [
+            "Espresso Suede Loafers, 50% Off"
+          ],
+          "descriptions": [
+            "Cash on Delivery · Easy Exchange"
+          ],
+          "callToAction": "SHOP_NOW",
+          "landingPageUrl": "https://muzaree.com/products/navy-blue-suede-leather-loafers-men",
+          "files": [
+            {
+              "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\B_price-drop_4x5.jpg",
+              "kind": "image",
+              "aspectRatio": "4:5"
+            },
+            {
+              "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\B_price-drop_9x16.jpg",
+              "kind": "image",
+              "aspectRatio": "9:16"
+            }
+          ]
+        },
+        {
+          "name": "C-cod-no-gamble",
+          "primaryTexts": [
+            "Buying shoes online shouldn't feel like a gamble.\n\nThat's why every Muzaree order is Cash on Delivery: you pay when the parcel reaches you. Wrong size? Exchange it, easily.\n\nPremium suede and leather loafers in sizes 39 to 44, from PKR 3,499."
+          ],
+          "headlines": [
+            "Pay When It Reaches You"
+          ],
+          "descriptions": [
+            "Premium loafers · Easy Exchange"
+          ],
+          "callToAction": "SHOP_NOW",
+          "landingPageUrl": "https://muzaree.com/collections/mens-luxury-leather-loafers",
+          "files": [
+            {
+              "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\C_cod-native_4x5.jpg",
+              "kind": "image",
+              "aspectRatio": "4:5"
+            },
+            {
+              "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\C_cod-native_9x16.jpg",
+              "kind": "image",
+              "aspectRatio": "9:16"
+            }
+          ]
+        }
+      ],
+      "optimizationGoal": "OFFSITE_CONVERSIONS"
+    }
+  ]
+}

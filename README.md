@@ -9,9 +9,10 @@ the MCP product that is **not** in its main repo
 | `linkedin-content-ops` | `AI-Automation/LinkedIn-Content-Ops` (approve and draft scripts; logs excluded) |
 | `social-render` | `AI-Automation/Social-Render` (post image and carousel renderer) |
 | `linkedin-content-system` | `Marketing-and-Content/LinkedIn-Content-System` (strategy, calendar, drafts, newsletter, assets) |
+| `clients/muzaree-paid-media` | `AI-Automation/Muzaree-Paid-Media` (client: Muzaree ads operated with the product; `logs/` run transcripts excluded) |
 | `marketing-notes` | `Marketing-and-Content/HANDOFF-*.md` |
-| `memory` | Claude's memory notes for this product |
-| `scheduled-tasks` | Windows Task Scheduler exports (worker, monitor, refresh, keepalive, LinkedIn drafts) |
+| `memory` | Claude's memory notes for this product (`adspilot-*`, `muzaree-*`, `server-front-gate`, `ads-objective-and-qa-rule`) |
+| `scheduled-tasks` | Windows Task Scheduler exports (worker, monitor, refresh, keepalive, LinkedIn drafts, Muzaree-Ads-Daily, Muzaree-Ads-Check) |
 
 `mirror/` is a copy: edit the originals, never these. Run `bash sync.sh` after a
 working session (it scans for secrets before committing, then pushes).

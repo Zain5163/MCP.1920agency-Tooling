@@ -23,7 +23,8 @@ you          double-click approve-linkedin-posts.cmd
              → each post shown in full: y schedule / n reject / s skip
              → y queues it through the Social-Publisher CLI (--publish --at)
 
-every 5 min  AdsPilot-Worker task publishes posts whose time has come
+the server   its worker loop publishes posts whose time has come (since 2026-10-09;
+             the PC task AdsPilot-Worker is disabled and only a fallback)
 ```
 
 **Owner's decision, 2026-10-01: approve every post.** Nothing reaches LinkedIn

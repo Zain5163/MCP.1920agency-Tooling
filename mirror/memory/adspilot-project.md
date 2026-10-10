@@ -5,12 +5,14 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2e482ace-b0b2-4185-962b-a49ffb3bed17
-  modified: 2026-10-09T11:18:09.835Z
+  modified: 2026-10-10T09:34:01.396Z
 ---
 
-AdsPilot lives in `D:\My AI Works\AI-Automation\Social-Publisher`. Resume from
-`START-HERE.md`, then `WAITING-LIST.md` (what is blocked and on whom) and the
-latest entries in `PROJECT-LOG.md`. `RULES.md` holds the owner's standing rules.
+AdsPilot (internal codename `adspilot`) lives in `D:\My AI Works\AI-Automation\Social-Publisher`.
+Resume from `START-HERE.md` (the ecosystem map), then `STATUS.md` (the one status file;
+open items stay in `WAITING-LIST.md` until it is folded in) and the latest entries in
+`PROJECT-LOG.md`. `RULES.md` holds the owner's standing rules; every other document is on
+a shelf under `docs/` (since 2026-10-10, decision 0011). Keep status in STATUS.md, not here.
 
 Owner's priority order (2026-09-30): social media automation, then Meta ads,
 then Google Ads, then everything else (SEO, WordPress, Business Profile, YouTube,
@@ -31,7 +33,7 @@ businesses, built so any AI client can run it.
   buyer unasked. Planned networks: Google, TikTok, Microsoft, Amazon, Snapchat,
   Pinterest, LinkedIn, X, Telegram.
 - "AdsPilot" is a working name only (taken by adspilot.tech and others); never
-  use it in public content until the owner picks a final name (research/2026-10-01-product-name.md).
+  use it in public content until the owner picks a final name (docs/research/2026-10-01-product-name.md).
 - LinkedIn posts on the owner's profile: the owner approves EVERY post
   (AI-Automation/LinkedIn-Content-Ops, approve-linkedin-posts.cmd). Never schedule
   or publish one without that per-post yes.
@@ -83,7 +85,7 @@ businesses, built so any AI client can run it.
   (list_shopify_stores, shopify_store_overview/products/sales/store_audit). Stores in
   ~/.social-publisher/shopify-stores.json. SHOPIFY_CONNECT_ADDRESS=23.227.38.69 in .env works
   around a dead ISP route; remove when *.myshopify.com loads. Plan:
-  architecture/2026-10-08-shopify-connector-plan.md. Phase 2a (products, pages, discounts) and
+  docs/architecture/2026-10-08-shopify-connector-plan.md. Phase 2a (products, pages, discounts) and
   2b (themes) built and verified on the dev store. Theme writes via the app need a Shopify
   exemption, so themes go through the Shopify CLI (person login, collaborator, or Theme Access
   password SHOPIFY_THEME_PASSWORD_<KEY>); drafts/backups in ~/.social-publisher/shopify-themes/.

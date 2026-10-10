@@ -1,0 +1,57 @@
+{
+  "note": "Round 2 refresh: swap in when an ad tires (frequency over 3 or click-through down 20%) or for Shaadi season from mid-November.",
+  "ads": [
+    {
+      "name": "E-shaadi-season",
+      "primaryTexts": [
+        "Shaadi season, sorted.\n\nMehndi, baraat, walima: one pair of Muzaree loafers works with a kurta, a shalwar kameez and a suit.\n\nElite Ivory Leather: PKR 8,999\nBlack Leather, Honey Sole: PKR 7,999\n\nCash on Delivery and easy exchange, so you can order now and be ready well before the date."
+      ],
+      "headlines": [
+        "Loafers for Shaadi Season"
+      ],
+      "descriptions": [
+        "Cash on Delivery · Easy Exchange"
+      ],
+      "callToAction": "SHOP_NOW",
+      "landingPageUrl": "https://muzaree.com/collections/mens-luxury-leather-loafers",
+      "files": [
+        {
+          "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\E_shaadi-season_4x5.jpg",
+          "kind": "image",
+          "aspectRatio": "4:5"
+        },
+        {
+          "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\E_shaadi-season_9x16.jpg",
+          "kind": "image",
+          "aspectRatio": "9:16"
+        }
+      ]
+    },
+    {
+      "name": "F-look-closer",
+      "primaryTexts": [
+        "Look closer. That's where good shoes are different.\n\nPremium suede upper. Hand-finished stitching. A soft cushioned insole. A light, flexible sole you can wear all day.\n\nMuzaree suede loafers from PKR 5,599, with Cash on Delivery and easy exchange."
+      ],
+      "headlines": [
+        "Made to Be Looked At Closely"
+      ],
+      "descriptions": [
+        "From PKR 5,599 · Cash on Delivery"
+      ],
+      "callToAction": "SHOP_NOW",
+      "landingPageUrl": "https://muzaree.com/collections/mens-luxury-leather-loafers",
+      "files": [
+        {
+          "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\F_look-closer_4x5.jpg",
+          "kind": "image",
+          "aspectRatio": "4:5"
+        },
+        {
+          "path": "D:\\My AI Works\\AI-Automation\\Muzaree-Paid-Media\\creatives\\2026-10-06-angles\\out\\F_look-closer_9x16.jpg",
+          "kind": "image",
+          "aspectRatio": "9:16"
+        }
+      ]
+    }
+  ]
+}

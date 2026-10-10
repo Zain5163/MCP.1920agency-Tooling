@@ -51,7 +51,7 @@ In this order, every run:
 4. The last 14 days of `drafts\`, so it doesn't repeat a hook, a fact or an opening.
 5. **The fact sources** (read-only):
    - `AI-Automation\Social-Publisher\PROJECT-LOG.md` (new entries since the last run are the main source of new build-in-public material)
-   - `AI-Automation\Social-Publisher\ROADMAP.md`, `decisions\`, `research\`
+   - `AI-Automation\Social-Publisher\STATUS.md`, `docs\product\roadmap.md`, `docs\decisions\`, `docs\research\` (shelved under `docs\` since 2026-10-10)
    - `AI-Automation\SEO-Ops\PLAYBOOK.md` (SEO pillar material)
 6. `INBOX.md` from the previous run, for anything the owner wrote back.
 

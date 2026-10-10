@@ -81,11 +81,11 @@ Drafting, approval and scheduling live in `AI-Automation\LinkedIn-Content-Ops` (
 
 ## Source locations
 
-- Facts: `AI-Automation\Social-Publisher\PROJECT-LOG.md`, `ROADMAP.md`, `decisions\0006`, `decisions\0008`, `research\2026-09-30-competitors.md`
+- Facts: `AI-Automation\Social-Publisher\PROJECT-LOG.md`, `STATUS.md`, `docs\product\roadmap.md`, `docs\decisions\0006`, `docs\decisions\0008`, `docs\research\2026-09-30-competitors.md`
 - SEO material: `AI-Automation\SEO-Ops\PLAYBOOK.md`, `README.md`
 - Brand: `Websites\Zain-Personal-Branding\PROJECT-CONTEXT.md` (dark teal and aqua glass, Geist type, outcome-led copy) for carousel and image design
 - Drafting, approval and scheduling: `AI-Automation\LinkedIn-Content-Ops` (`Run-LinkedInDrafts.ps1`, `Approve-LinkedInPosts.ps1`, `logs\`)
-- Publishing: `AI-Automation\Social-Publisher` (the AdsPilot-Worker task, every 5 minutes)
+- Publishing: `AI-Automation\Social-Publisher`, run by the server's worker loop since 2026-10-09 (the PC task AdsPilot-Worker is disabled, a fallback only)
 - Automation model: `AI-Automation\SEO-Ops\Run-DailySEO.ps1`
 
 ## Risks

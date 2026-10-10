@@ -1,0 +1,235 @@
+# Muzaree — media-buying rules
+
+The rules the daily run (`Run-MuzareeDaily.ps1`) and any chat session apply to
+Muzaree's Meta ad account. Written 2026-10-08 from the owner's brief: *raise
+sales, scale the account, bring cost per sale down to PKR 500–700, manage it
+daily, full authority.*
+
+Methods come from AdsPilot's own `meta-account-manager` skill (built 2026-10-08
+from dated online research, `research/2026-10-08-meta-ecommerce-strategy.md`),
+the `meta-ads` and `meta-performance` playbooks, and the `ad-creative`, `offers` and
+`cro` skills. Read those for the reasoning; this file holds the numbers for this account.
+
+## The account
+
+| | |
+|---|---|
+| AdsPilot account | `account: "muzaree"` on every ads tool (`act_144042365972084`, PKR) |
+| Pixel | `1407317194096683`, optimise for **Purchase** |
+| Spend ceiling (AdsPilot) | PKR 10,000/day, 300,000/month, set in `~/.social-publisher/ad-accounts.json` |
+| What we advertise | Muzaree footwear only. Never the replica-brand watches (policy risk) |
+
+## Targets
+
+| | Value | Why |
+|---|---|---|
+| **Target cost per purchase** | **PKR 450** (single pair); 700 with a two-pair bundle live | Profit maths below: 600–700 is only break-even at today's order size |
+| Loss line | PKR 500 single pair; PKR 1,000 with a bundle | Above it after learning, the ad set loses money |
+| Average order (Sep–Oct) | about PKR 7,344 (≈1.2 pairs) | A 10× return on ad spend still leaves little: tax, product cost and delivery take most of each sale |
+| Baseline when we took over | PKR 1,351 (1–5 Oct), 1,398 (Sep) | What "better" is measured against |
+| Break-even | About PKR 450–800 at today's order size; see Profit maths | Client's figures, 2026-10-08 |
+| **Daily budget cap** | **PKR 5,000 across the whole account** (AdsPilot ceiling set to 5,500/day, 165,000/month) | Owner, 2026-10-09: results are not consistent yet; no more until they are. Proven ads get most of it; tests stay small |
+| Check frequency | Every 4 hours (task `Muzaree-Ads-Check`, 03/07/15/19/23) plus the 11:00 daily report | Owner, 2026-10-09: be vigilant and proactive |
+
+## Structure (research, 2026-10-08)
+
+- **Two ad sets at most** across the account until it makes 50+ purchases a week (it
+  makes about 28–56). Today: "Rebuild Campaign" (2 ads) and the new Chelsea-led
+  campaign (6 ads). No new campaigns or ad sets; new creative goes into the new ad set.
+- **Hold "Rebuild Campaign" at PKR 3,321/day** while the new ad set learns. No +20% on
+  it (withdrawn 2026-10-08). After 7 days of the new ad set, move budget in 20% steps
+  toward whichever ad set has the lower cost per purchase, and plan to consolidate into one.
+- Highest volume bidding. No cost cap until cost per purchase has been stable for 2+ weeks.
+
+## Creative volume
+
+- Target **8–12 genuinely different concepts** live (Meta treats look-alike ads as one).
+  Today 6 new + 2 old. Round 2 to build this week: E "Shaadi season", F "Look closer",
+  plus 2–4 new formats (a short captioned video from real product footage, a native
+  "notes"-style text post, a real-review post if the business supplies real reviews).
+- Expect about 1 real winner in 20 new ads. That is normal.
+
+## Cash on delivery
+
+- Ask the owner for the courier return / refused-delivery rate. Until then, report
+  cost per purchase and note that cost per **delivered** order is higher (at 25%
+  returns, PKR 600 per order is PKR 800 per delivered order).
+- Recommend order confirmation by WhatsApp or call before dispatch.
+- Since March 2026 Meta counts click-through attribution on link clicks only (default
+  7-day click, 1-day engage-through, 1-day view); Meta and Shopify will not match.
+
+## Profit maths (client's figures via the owner, corrected 2026-10-08)
+
+| | Value | Source |
+|---|---|---|
+| Product cost | **PKR 3,500 per pair** | Client, confirmed |
+| Selling price | PKR 5,500–6,500 per pair | Client |
+| Average order | PKR 7,344 (about 1.2 pairs) | Meta pixel, last 30 days |
+| Courier charge | PKR 500–600; the customer pays 200–250, so the store absorbs about 325 | Client |
+| Tax | 18% or 24%, **paid out of the selling price** | Client; rate being confirmed online |
+| Returns / refused COD | Unknown, so modelled at 15–35% (a refused parcel ≈ PKR 1,100 in courier charges) | Ask the client |
+
+**Break-even cost per purchase** (what Meta reports), returns 15% / 25% / 35%:
+
+| Order | 18% tax | 24% tax |
+|---|---|---|
+| Single pair at 5,500 | 417 / 239 / 60 | loss at almost any ad cost |
+| Single pair at 6,000 | 766 / 546 / 327 | 460 / 276 / 93 |
+| Average order today (7,344) | 1,036 / 785 / 534 | 662 / 454 / 247 |
+| **Two-pair bundle (2 × 5,999, one delivery)** | **1,971 / 1,610 / 1,249** | **1,359 / 1,070 / 781** |
+
+Not yet counted: packaging, COD/payment fees, staff, Shopify and app fees.
+
+**Tax research (2026-10-08, `research/2026-10-08-pakistan-ecommerce-tax-and-costs.md`):**
+couriers withhold about **4% of each COD order** (2% income tax, 2% sales tax). For a
+seller registered as a **retailer/reseller**, that 2% is reportedly the **final** sales
+tax; a **manufacturer** pays the standard **18%**. **No source supports 24%.** Couriers also
+charge about PKR 50–200 COD fee per parcel. Muzaree buys pairs from makers, so it may be a
+reseller: **the client's accountant must confirm which applies** (not tax advice).
+
+| Break-even per purchase, returns 15 / 25 / 35% (incl. ~PKR 125 COD fee) | 18% + 2% (manufacturer) | ~4% withheld (retailer) |
+|---|---|---|
+| Single pair at 6,000 | 558 / 362 / 168 | 1,374 / 1,082 / 792 |
+| Average order 7,344 | 805 / 581 / 357 | 1,804 / 1,462 / 1,121 |
+| Two-pair bundle 11,998 | 1,661 / 1,336 / 1,011 | 3,293 / 2,776 / 2,259 |
+
+The decision lines below stay on the cautious (18%) case until the accountant confirms;
+if the business is a retailer at ~4%, they roughly double.
+
+**What it means:**
+- At today's order size, **PKR 600–700 per purchase is roughly break-even, not profit.**
+  Lower cost per sale alone cannot make this brand profitable.
+- **The biggest lever is order size**: a two-pair offer roughly doubles what can be paid
+  per sale. Second: fewer refused parcels (confirm every order; 10% prepaid discount).
+  Third: delivery absorbed (the free-delivery threshold at PKR 5,000 means the store
+  pays delivery on nearly every order).
+- Pairs sold at PKR 5,500 or less lose money once tax and delivery are paid. Do not lead
+  ads with the cheapest items (ad C says "from PKR 3,499": check those items' cost).
+
+**Decision lines until tax and return rate are confirmed (assume 24% tax, 25% returns):**
+- **Loss line: PKR 500 per purchase** for single-pair offers. An ad set above it for 3 days
+  after learning loses money: cut it, or move its budget.
+- **Scale only at or under PKR 450** on single-pair ads, or with a bundle offer live.
+- With a two-pair bundle live: loss line PKR 1,000, scale at or under PKR 700.
+- Report cost per purchase **and** the average order value every day: a rising
+  average order is as valuable as a falling cost per purchase.
+
+## Next six weeks (event-calendar skill, 2026-10-08)
+
+| When | Event | What we do | Launch by |
+|---|---|---|---|
+| Now to Feb, peak Nov–Jan | **Winter + wedding (shaadi) season** | Chelsea boots lead; bring ad E "Shaadi season, sorted" forward into round 2 now (was mid-November) | Now |
+| 9 Nov | Iqbal Day | Respectful post only, no discount hook | — |
+| **11 Nov** (Daraz 11.11 runs ~10–21 Nov) | **11.11** | An 11.11 offer (client decides: bundle, free delivery, % off); shoppers compare with Daraz | **28 Oct** |
+| **27 Nov** | **White Friday** | Biggest sale moment of the year in PK; the bundle offer fits best | **5–12 Nov** |
+| **12 Dec** | **12.12** | Year-end clearance on slow colours and sizes | **28 Nov** |
+| 16–31 Dec | Post-peak | Ad prices fall (~10% late Dec 2025): cheaper retargeting | — |
+| 25 Dec | Quaid-e-Azam Day | Respectful tribute post, not a hard sell | — |
+
+Lead time: creative ready a week before the launch-by date, so ads have left learning by the peak.
+Rising ad prices from late October to mid-December: start event ads early at a steady
+budget rather than late at a high one.
+
+## Proposals for the business (owner to take to the client)
+
+1. **Two-pair bundle**, e.g., "any 2 pairs for PKR 11,499" (price is the client's call). Ideal as the 11.11 and White Friday offer.
+0. **Ask the accountant: retailer (~4% withheld at COD) or manufacturer (18%)?** It roughly doubles or halves what each sale can afford.
+2. **Order confirmation** by WhatsApp or call before dispatch, and push the 10% prepaid discount.
+3. **Free delivery only on bundles** (raise the threshold above one pair's price).
+4. Lead ads with pairs priced PKR 6,000+, and the bundle.
+
+## This account's baselines (computed 2026-10-08 from Meta history)
+
+Judge every funnel step against these, not against generic benchmarks. Method:
+`structure-and-metrics.md` in the meta-account-manager skill.
+
+| Step | Best month (Feb 2026) | Last 30 days (to 5 Oct) |
+|---|---|---|
+| Cost per purchase | 636 | 1,413 |
+| CPM | 251 | 345 |
+| Link CTR | 2.34% | 1.74% |
+| Cost per link click | 10.7 | 19.8 |
+| Landing page views ÷ clicks | 78% | 79% |
+| Add to cart ÷ landing page views | 5.9% | 3.5% |
+| Checkout ÷ add to cart | 77% | 86% |
+| Purchase ÷ checkout | 47% | 59% |
+| Average order | — | PKR 7,344 |
+
+The break is at the hook (CTR, CPC) and at add-to-cart (offer and store), not at checkout.
+
+**Proven winners to carry forward** (90 days, by cost per purchase): "Winner | Video Ad 7"
+(PKR 607, 9 sales), "Images [10+] | 13 Sept 26" (743), "Rebuild → video 3" (1,024). Videos and
+multi-image ads beat single statics. Round 2 must include video: reuse these videos
+(they are in the account's media library) with today's prices.
+
+**CBO or ABO here:** one live ad set per campaign today, so they are the same. Test round 2
+with ABO, or with Meta's Creative Testing inside the live ad set. When two ad sets have each
+proven a cost per purchase under the current scale line (Profit maths), combine them into one CBO campaign to scale.
+
+## Daily checks, in this order
+
+1. **Account health.** Payment failed or account restricted, any ad rejected, pixel
+   silent over 24 hours. Any of these goes first in the report, marked URGENT.
+2. **Yesterday and the last 3 and 7 days** for the account and each active campaign:
+   spend, purchases, cost per purchase, return on ad spend, frequency, CTR, and
+   landing-page views per click.
+3. **Each ad**, against the rules below.
+4. **What changed** (`get_ad_activity`, 3 days), so a swing is not blamed on an ad
+   when a budget edit, a payment failure or a re-review caused it.
+
+## Decisions
+
+Never judge an ad in its first **3 days** or before it has spent **PKR 2,100**
+(3 × target). Purchases can arrive up to 7 days after the click; the last two days
+always look worse than they will.
+
+| Situation (7-day numbers unless stated) | Action | Approval? |
+|---|---|---|
+| Ad spent ≥ PKR 2,100 and 0 purchases, and is 3+ days old (≈3.5× target, 1.5× today's average: research says 2–3× target, raised because the account still averages PKR 1,350) | **Switch the ad off** | No: stopping spend never waits |
+| Ad spent ≥ PKR 3,000 at over PKR 1,000 per purchase (2× the loss line) | **Switch the ad off** | No |
+| Ad set at or under the **scale line** (PKR 450 single pair; 700 with a bundle live) over 3 days, ≥ 5 purchases, out of learning, no budget change in the last 3 days | **Propose +20% budget** | **Yes** |
+| Ad set still at or under the scale line after 7 days | Propose +20% again (never a bigger jump) | **Yes** |
+| Ad set over the **loss line** (PKR 500 single pair; 1,000 with a bundle) for 3 days after learning | Propose −20%, or moving its budget to the winner; say plainly it is losing money | **Yes** |
+| Ad frequency over 3, or CTR down 20%+ week on week | Queue a fresh version of the **same angle** (new hook or image) beside it | **Yes** (new ads) |
+| An angle wins (lowest cost per purchase with enough spend) | Make 2–3 new ads on that angle for the next round | **Yes** |
+| In learning, or too little data | **Wait. Change nothing.** | — |
+
+Never:
+- switch off the **last** running ad in an ad set;
+- change a budget by more than 20% at once, or twice within 3 days;
+- edit a running ad's text or image (it restarts learning): launch a new ad beside it;
+- narrow targeting as a fix (the creative does the targeting);
+- go around the AdsPilot spend ceiling.
+
+## Creative pipeline
+
+- Round 1 (live from Oct 2026): ads D, G, H (Chelsea boots), A, B, C (loafers). See `STATUS.md`.
+- Round 2, ready: `campaigns/2026-10-06-six-angles/refresh-round2.json`. E "Shaadi season,
+  sorted." (use from mid-November) and F "Look closer.".
+- Every new ad uses a real Muzaree product photo, the store's live price, and only
+  claims the store makes (Cash on Delivery, Easy Exchange, 10% off for advance
+  payment). Check prices on muzaree.com before reusing a creative: a sale price
+  that changed makes the ad wrong.
+- Chelsea boots are the lead product through winter (Oct–Feb). Loafers are the
+  year-round base.
+
+## What the business must fix (blocks the PKR 600 target as much as the ads do)
+
+Listed in `STATUS.md` under "Website problems": contradictory free-delivery limits,
+a stale "AZADI SALE" banner, template claims ($100 shipping, 30-day refunds, 3000+
+reviews), and coupon codes shown publicly. Add-to-cart fell from 5.9% of visitors
+(Feb) to 3.5% (Sep). Repeat this in the report until it is fixed.
+
+## Report
+
+Each daily run writes `reports/YYYY-MM-DD.md`:
+
+1. **Headline:** yesterday, 3-day and 7-day spend, purchases, cost per purchase
+   against PKR 600, and return on ad spend. One sentence on whether it is working.
+2. **Done today:** every ad switched off, with its numbers and the rule that fired.
+3. **Waiting for your yes:** each proposal, with the exact tool call it needs. These
+   are also added to `PENDING-APPROVALS.md`.
+4. **Watch:** anything near a rule but not over it.
+5. **Urgent**, at the top when present: payment, rejection, pixel, site down.
+
+Plain words, real numbers only, and no proposal described as done.
