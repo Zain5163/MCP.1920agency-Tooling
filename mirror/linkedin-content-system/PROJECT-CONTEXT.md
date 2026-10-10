@@ -121,6 +121,19 @@ Drafting, approval and scheduling live in `AI-Automation\LinkedIn-Content-Ops` (
   10-15 PM (daily vs monthly caps) repeats 10-06 PM and 10-07 AM.
 - `INBOX.md` created (one line per draft).
 
+## 2026-10-08 drafting run (for 2026-10-10)
+
+- Drafted `drafts\2026-10-10-mid.md` (P3 substitute: the order to let AI into a marketing team,
+  read → draft → prepare → act with approval, closing with a stage-2 question) and
+  `drafts\2026-10-10-pm.md` (P2, B2B Meta lead forms, written as text instead of a document so it
+  can be scheduled). Both `status: draft`.
+- The calendar's 10-10 MID ("no AI model of its own") was not written because it repeats 10-03 MID.
+- The Social-Publisher folder (PROJECT-LOG, decisions, ROADMAP) still could not be read (permission
+  not granted), so neither post uses new product facts. The lead-form post rests on third-party web
+  write-ups; its `check_before_posting` lists what to confirm in Ads Manager and against the Meta
+  playbook ("three custom questions at most").
+- Newsletter edition 1 is still `status: draft`, so neither post carries a subscribe line.
+
 ## Newsletter (2026-10-05)
 
 Weekly LinkedIn newsletter **Before It Has a Name**: form text, logo (`newsletter/logo-300.png`),

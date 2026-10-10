@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2e482ace-b0b2-4185-962b-a49ffb3bed17
-  modified: 2026-10-08T00:49:22.368Z
+  modified: 2026-10-09T11:18:09.835Z
 ---
 
 AdsPilot lives in `D:\My AI Works\AI-Automation\Social-Publisher`. Resume from
@@ -73,14 +73,38 @@ businesses, built so any AI client can run it.
   `deploy/scripts/release.sh` from the repo (git archive; refuses pending
   migrations; `--rollback`). Steps and remaining items: `deploy/README.md` and the
   architecture doc's Phase 3 status. Both PC and server workers can drain the
-  same queue safely (SKIP LOCKED).
+  same queue safely (SKIP LOCKED). Since 2026-10-09 the SERVER does all
+  scheduled work (worker loop + systemd timers: monitor 30 min, refresh, backup,
+  keep-alive every 3 days); the PC tasks AdsPilot-Worker/Monitor/Refresh and
+  Social-Publisher-Keepalive are disabled on purpose — don't re-enable them
+  unless the server is down. Front door is the shared gate ([[server-front-gate]]).
 - Shopify connector (2026-10-08): app "1920 Agency Store Connector" (org 239616792, config in
   integrations/shopify-app), dev store 1920-agency-test-store; phase 1 read tools live
   (list_shopify_stores, shopify_store_overview/products/sales/store_audit). Stores in
   ~/.social-publisher/shopify-stores.json. SHOPIFY_CONNECT_ADDRESS=23.227.38.69 in .env works
   around a dead ISP route; remove when *.myshopify.com loads. Plan:
-  architecture/2026-10-08-shopify-connector-plan.md (phase 2 = writes behind approvals).
+  architecture/2026-10-08-shopify-connector-plan.md. Phase 2a (products, pages, discounts) and
+  2b (themes) built and verified on the dev store. Theme writes via the app need a Shopify
+  exemption, so themes go through the Shopify CLI (person login, collaborator, or Theme Access
+  password SHOPIFY_THEME_PASSWORD_<KEY>); drafts/backups in ~/.social-publisher/shopify-themes/.
+- Hosted self-service Shopify connect (shopify_connect_store → mcp.1920agency.com/shopify/callback)
+  built and committed 2026-10-08, NOT deployed; the owner will deploy from another chat using
+  deploy/README.md "Shopify self-service: deploy steps" (Raptor Caddyfile route committed, cffbb2e).
+  Owner decided (2026-10-08): go public once it works end to end; bill through Shopify Billing
+  for now (not AdsPilot's own billing). Muzaree's store is not touched until the client gives access.
+- Store design (2026-10-08): owner rejected "default Horizon + text" as amateur. Now: skill
+  `shopify-store-kit` (87b7305) = tested Horizon sections/settings/example home page; web-ui-design
+  hard gate = set the design system and look at 390/1440 px screenshots before showing anything.
+  Screenshot script needs SHOPIFY_STOREFRONT_PASSWORD_PRACTICE in .env (owner added it); Horizon
+  scrolls inside the page (phone: overflow visible + fullPage; desktop: grow the viewport).
+- Phase 2c store-building tools (create product, collection, menu, policy; theme draft `from`
+  another theme) committed 942e695; needs app config v6 released (new scopes publications +
+  legal_policies, owner approval) and a live rehearsal on the practice store.
 - The owner's own offline datasets (PixBundle.com etc.) and the token's reach into
   client ad accounts are deliberate; do not flag them.
 
 Related: [[video-editing-operating-rules]]
+- Account turnaround (2026-10-09, af13a8d): tools diagnose_account_trend (monthly funnel, best vs latest,
+  steps multiply to the CPP change) and break_even_cost_per_sale (also hosted); skill account-turnaround.
+  Fixes same day: get_ad_performance judges Sales on purchases; set_ad_delivery off works on ads; spend
+  ceiling counts IN_PROCESS budgets.

@@ -31,9 +31,9 @@ activate and budget change.
   (11:00 PKT) runs `Run-MuzareeDaily.ps1`: applies `MEDIA-BUYING-RULES.md`, may only
   switch losing ads OFF, writes `reports/`, queues everything else in
   `PENDING-APPROVALS.md` for the owner's yes.
-- Unit economics (client, 2026-10-08): cost PKR 3,500 per pair, price 5,500–6,500, tax 18–24%
-  paid out of the price, store absorbs ~PKR 325 delivery. At today's order size PKR 600–700 per
-  purchase is only break-even; loss line PKR 500 (single pair), scale ≤ 450, or ≤ 700 with a
-  two-pair bundle. Order size (bundles) and fewer refused parcels are the profit levers.
+- Unit economics (client, 2026-10-09): cost PKR 3,500/pair incl. packaging, price 5,500–6,500, retailer
+  4% tax + 2.1%, courier 400+, 30% refused parcels. Break-even ≈ PKR 920/purchase (single pair at 6,000),
+  ≈ 1,300 at average order 7,344; two-pair bundle ≈ 2,400. Target 500–700, loss line 1,000. Never advertise
+  the 3,499 models (below cost). Owner's cap: PKR 5,000/day total; checks every 4 hours (Muzaree-Ads-Check).
 
 Related: [[adspilot-project]]

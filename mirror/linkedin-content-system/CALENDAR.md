@@ -41,8 +41,9 @@ here is scheduled or published.**
 | 2026-10-09 | Fri | MID | P5 | Text + image (Meta results, redacted) | My first live campaign ended. Here's what PKR ~3,500 bought. | **needs data**: read results from Meta (`get_ad_performance`) after 7 Oct. Do not write until real. Campaign paused 2026-10-01, so the title must follow real spend. Not written; the slot holds a substitute (next row) |
 | 2026-10-09 | Fri | MID | P3 | Text | (substitute) An AI drafts my LinkedIn posts. It has no way to publish them. | drafted 2026-10-07 |
 | 2026-10-09 | Fri | PM | P2 | Text | Traffic campaigns: optimise for landing page views, not link clicks | drafted 2026-10-07 |
-| 2026-10-10 | Sat | MID | P3 | Text | Why the tool has no AI model of its own (your AI does the writing) | planned |
-| 2026-10-10 | Sat | PM | P2 | Document | Meta lead forms for B2B: Higher Intent, work email, max 3 custom questions | planned |
+| 2026-10-10 | Sat | MID | P3 | Text | Why the tool has no AI model of its own (your AI does the writing) | not written: repeats 2026-10-03 MID. The slot holds a substitute (next row) |
+| 2026-10-10 | Sat | MID | P3 | Text | (substitute) Don't start where the demos start: the order I'd let AI into a marketing team | drafted 2026-10-08 |
+| 2026-10-10 | Sat | PM | P2 | Text (was Document) | Meta lead forms for B2B: Higher Intent, work email, max 3 custom questions | drafted 2026-10-08 as text |
 | 2026-10-11 | Sun | MID | P4 | Text | "No licence" doesn't mean open source: a lesson from choosing what to build on | planned |
 | 2026-10-11 | Sun | PM | P2 | Text | Why I refuse campaigns below a minimum daily budget | planned |
 | 2026-10-12 | Mon | AM | P2 | Text | Text variants and placement-specific images can't share one Meta creative | planned |
